@@ -24,6 +24,8 @@ This router is the way, how to route your requests in domain level with website 
 composer require mvccore/ext-router-module-media
 ```
 
+[go to top](#user-content-outline)
+
 ## 2. Features
 Extension has the same features as extensions bellow together:
 - [Features for `mvccore/ext-router-module`](https://github.com/mvccore/ext-router-module#user-content-2-features)
