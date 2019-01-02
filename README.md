@@ -23,3 +23,56 @@ This router is the way, how to route your requests in domain level with website 
 ```shell
 composer require mvccore/ext-router-module-media
 ```
+
+## 2. Features
+Extension has the same features as extensions bellow together:
+- [Features for `mvccore/ext-router-module`](https://github.com/mvccore/ext-router-module#user-content-2-features)
+- [Features for `mvccore/ext-router-media`](https://github.com/mvccore/ext-router-media#user-content-2-features)
+
+Website media version could be contained in any module domain route as param named `<media_version>` match URL requests like this:
+- `http://www.example.com/anything`
+- `http://mobile.example.com/anything`
+```php
+new \MvcCore\Ext\Routers\Modules\Route([
+    "pattern"              => "//<media_version>.example.com",
+    "module"               => "main",
+    "constraints"          => ["media_version" => "www|mobile"],
+]);
+```
+If there is not contained param `<media_version>` in matched module domain route pattern, website media version param has to be contained (or is automaticly inserted) in URL address beginning like this:
+- `http://www.example.com/anything`
+- `http://www.example.com/mobile/anything`
+How precisely is conained in URL address depends on advanced router configuration like allowed media version and more...
+
+[go to top](#user-content-outline)
+
+## 3. How It Works
+
+Extension works in the same way as extensions bellow together:
+- [How It Works - `mvccore/ext-router-module`](https://github.com/mvccore/ext-router-module#user-content-3-how-it-works)
+- [How It Works - `mvccore/ext-router-media`](https://github.com/mvccore/ext-router-media#user-content-3-how-it-works)
+
+[go to top](#user-content-outline)
+
+## 4. Usage
+
+### 4.1. Usage - `Bootstrap` Initialization
+
+Add this to `/App/Bootstrap.php` or to **very application beginning**, 
+before application routing or any other extension configuration
+using router for any purposes:
+
+```php
+$app = & \MvcCore\Application::GetInstance();
+$app->SetRouterClass('\MvcCore\Ext\Routers\ModuleMedia');
+...
+// to get router instance for next configuration:
+/** @var $router \MvcCore\Ext\Routers\ModuleMedia */
+$router = & \MvcCore\Router::GetInstance();
+```
+
+All other specific usage and advanced configuration is the same as extensions bellow together:
+- [More usage and configuration for `mvccore/ext-router-module`](https://github.com/mvccore/ext-router-module#user-content-42-usage---targeting-custom-application-part)
+- [More usage and configuration for `mvccore/ext-router-media`](https://github.com/mvccore/ext-router-media#user-content-42-usage---media-url-prefixes-and-allowed-media-versions)
+
+[go to top](#user-content-outline)
