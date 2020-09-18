@@ -16,6 +16,7 @@ namespace MvcCore\Ext\Routers\ModuleMedia;
 trait DomainRouteSetUp
 {
 	protected function domainRoutingSetUpRouterByDomainRoute () {
+		/** @var $this \MvcCore\Ext\Routers\ModuleMedia */
 		// if domain route contains any allowed media version configuration,
 		// set up router by this configuration
 		$allowedMediaVersions = $this->currentDomainRoute->GetAdvancedConfigProperty(
