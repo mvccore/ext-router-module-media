@@ -7,8 +7,8 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
- * @license		https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
+ * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
 namespace MvcCore\Ext\Routers;
@@ -25,8 +25,8 @@ extends		\MvcCore\Router
 implements	\MvcCore\Ext\Routers\IModule,
 			\MvcCore\Ext\Routers\IMedia,
 			\MvcCore\Ext\Routers\ILocalization,
-			\MvcCore\Ext\Routers\IExtended
-{
+			\MvcCore\Ext\Routers\IExtended {
+
 	use \MvcCore\Ext\Routers\Extendeds\PropsGettersSetters;
 	use \MvcCore\Ext\Routers\Extendeds\Preparing;
 	use \MvcCore\Ext\Routers\Extendeds\RedirectHelpers;
@@ -57,10 +57,10 @@ implements	\MvcCore\Ext\Routers\IModule,
 	use \MvcCore\Ext\Routers\ModuleMedia\Redirect;
 
 	/**
-	 * MvcCore Extension - Router Media - version:
+	 * MvcCore Extension - Router - ModuleMedia - version:
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.0.0-alpha';
+	const VERSION = '5.0.0';
 }
 
