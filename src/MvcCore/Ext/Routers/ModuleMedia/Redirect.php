@@ -13,10 +13,12 @@
 
 namespace MvcCore\Ext\Routers\ModuleMedia;
 
+/**
+ * @mixin \MvcCore\Ext\Routers\ModuleMedia
+ */
 trait Redirect {
 
 	protected function redirectCorrectDomainSystemParams (& $domainParams) {
-		/** @var $this \MvcCore\Ext\Routers\ModuleMedia */
 		$mediaVersionParamName = static::URL_PARAM_MEDIA_VERSION;
 		if (isset($domainParams[$mediaVersionParamName])) {
 			$domainParams[$mediaVersionParamName] = $this->redirectMediaGetUrlValueAndUnsetGet(
