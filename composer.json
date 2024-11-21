@@ -33,10 +33,10 @@
 	}],
 	"require": {
 		"php": ">=5.4.0",
-		"mvccore/mvccore": "^5.2",
-		"mvccore/ext-router-extended": "^5.2",
-		"mvccore/ext-router-media": "^5.2",
-		"mvccore/ext-router-module": "^5.2"
+		"mvccore/mvccore": "^5.3",
+		"mvccore/ext-router-extended": "^5.3",
+		"mvccore/ext-router-media": "^5.3",
+		"mvccore/ext-router-module": "^5.3"
 	},
 	"autoload": {
 		"classmap": [
